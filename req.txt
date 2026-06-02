@@ -1,0 +1,35 @@
+# Core
+langchain
+langchain-core
+langchain-community
+
+# OpenAI-compatible APIs (OpenRouter, Groq)
+langchain-openai
+openai
+
+# Google Gemini
+langchain-google-genai
+google-generativeai
+
+# Mistral
+langchain-mistralai
+mistralai
+
+# Environment management
+python-dotenv
+
+# Optional but commonly used
+tiktoken
+pydantic
+requests
+
+# Vector DB / embeddings (optional)
+faiss-cpu
+
+# API server (optional)
+fastapi
+uvicorn
+
+# Notebook support (optional)
+jupyter
+ipykernel
