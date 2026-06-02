@@ -33,6 +33,7 @@ requests
 faiss-cpu
 sentence-transformers
 torch
+torchvision
 
 # API server (optional)
 fastapi
