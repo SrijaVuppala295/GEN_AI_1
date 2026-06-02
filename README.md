@@ -64,3 +64,37 @@ To run any of these applications locally on your machine, follow these steps:
 ```bash
 git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git)
 cd YOUR_REPO_NAME
+```
+
+### 2. Set Up a Virtual Environment & Install Dependencies
+Ensure you have a master `requirements.txt` file setup in the root folder.
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 3. Configure Environment Variables
+Create a `.env` file in the root directory to store your private credentials:
+```env
+MISTRALAI_API_KEY="your_actual_mistral_api_key_here"
+```
+
+### 4. Running the Applications Locally
+Execute any app by pointing Streamlit to the specific subfolder script:
+```bash
+# To run the Core Chatbot
+streamlit run chatbot/chatbotUI.py
+
+# To run CineSage
+streamlit run CineSage/UICineSage.py
+```
+
+---
+
+## 🌐 Production Deployment Architecture
+
+The production environment is hosted entirely on **Streamlit Community Cloud**, utilizing a centralized repository model:
+* **Continuous Integration:** Any updates pushed to the `main` branch on GitHub automatically trigger a rebuild and update the live applications within 60 seconds.
+* **Secrets Security:** Application keys are securely injected via Streamlit's Encrypted TOML Vault under `Advanced Settings > Secrets`, keeping production API credentials separate from the source code.
+* **Master Package Management:** A single, top-level `requirements.txt` manages dependencies uniformly for all isolated microservice routes.
