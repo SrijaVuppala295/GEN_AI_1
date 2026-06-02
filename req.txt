@@ -2,10 +2,13 @@
 langchain
 langchain-core
 langchain-community
+langchain-huggingface
+langchain-groq
 
 # OpenAI-compatible APIs (OpenRouter, Groq)
 langchain-openai
 openai
+groq
 
 # Google Gemini
 langchain-google-genai
@@ -18,6 +21,9 @@ mistralai
 # Environment management
 python-dotenv
 
+# UI / web apps
+streamlit
+
 # Optional but commonly used
 tiktoken
 pydantic
@@ -25,6 +31,8 @@ requests
 
 # Vector DB / embeddings (optional)
 faiss-cpu
+sentence-transformers
+torch
 
 # API server (optional)
 fastapi
